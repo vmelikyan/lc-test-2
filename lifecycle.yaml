@@ -26,17 +26,19 @@ services:
         init:
           dockerfilePath: 'sysops/dockerfiles/init.dockerfile'
       deployment:
-        public: true
-        capacityType: 'SPOT'
-        resource:
-          cpu:
-            request: '10m'
-          memory:
-            request: '100Mi'
-        readiness:
-          tcpSocketPort: 8080
-          httpGet:
-            port: 8080
+        helm:
+          enabled: true
+        # public: true
+        # capacityType: 'SPOT'
+        # resource:
+        #   cpu:
+        #     request: '10m'
+        #   memory:
+        #     request: '100Mi'
+        # readiness:
+        #   tcpSocketPort: 8080
+        #   httpGet:
+        #     port: 8080
 
   - name: "grpc-echo"
     github:
@@ -51,24 +53,26 @@ services:
           env:
             COMPONENT: "app"
       deployment:
-        public: true
-        capacityType: "SPOT"
-        resource:
-          cpu:
-            request: "10m"
-          memory:
-            request: "100Mi"
-        readiness:
-          tcpSocketPort: 8090
-          httpGet:
-            path: "/__lbheartbeat__"
-            port: 8090
-        hostnames:
-          host: 'lifecycle.dev.goodrx.com'
-          defaultInternalHostname: 'grpc-echo-good-dev-0'
-          defaultPublicUrl: 'grpc-echo-good-dev-0.lifecycle.dev.goodrx.com'
-        network:
-          grpc:
-            enable: true
-            host: "lifecycle-grpc.dev.goodrx.com"
-            defaultHost: "grpc-echo-good-dev-0.lifecycle-grpc.dev.goodrx.com"
+        helm:
+          enabled: true
+        # public: true
+        # capacityType: "SPOT"
+        # resource:
+        #   cpu:
+        #     request: "10m"
+        #   memory:
+        #     request: "100Mi"
+        # readiness:
+        #   tcpSocketPort: 8090
+        #   httpGet:
+        #     path: "/__lbheartbeat__"
+        #     port: 8090
+        # hostnames:
+        #   host: 'lifecycle.dev.goodrx.com'
+        #   defaultInternalHostname: 'grpc-echo-good-dev-0'
+        #   defaultPublicUrl: 'grpc-echo-good-dev-0.lifecycle.dev.goodrx.com'
+        # network:
+        #   grpc:
+        #     enable: true
+        #     host: "lifecycle-grpc.dev.goodrx.com"
+        #     defaultHost: "grpc-echo-good-dev-0.lifecycle-grpc.dev.goodrx.com"

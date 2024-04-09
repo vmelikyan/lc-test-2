@@ -3,6 +3,28 @@ version: '1.0.0'
 
 environment:
   defaultServices:
+    - name: 'lc-test-2'
     - name: 'lc-test'
     repository: 'vmelikyan/lc-test'
     branch: 'all-helm'
+
+services:
+  - name: "lc-test-2"
+    helm:
+      repository: 'vmelikyan/lc-test'
+      branchName: 'main'
+      chart:
+        name: 'goodrx-app'
+        valueFiles:
+          - 'sysops/helm/common.yaml'
+          - 'sysops/helm/lfc/service/app.yaml'
+      docker:
+        defaultTag: 'main'
+        app:
+          dockerfilePath: 'sysops/dockerfiles/app.dockerfile'
+          env:
+            CLIENT_HOST: '{{grpc-echo_internalHostname}}:8080'
+            TEST_TEST: 'test'
+            WHAT: "is-this"
+          ports:
+            - 8080

@@ -2,7 +2,9 @@
 version: '1.0.0'
 
 environment:
-  defaultServices:
+  enabledFeatures:
+    - 'no-default-env-resolve'
+  optionalServices:
     - name: 'lc-test'
       repository: 'vmelikyan/lc-test'
       branch: 'all-helm'

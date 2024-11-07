@@ -2,6 +2,8 @@
 version: '1.0.0'
 
 environment:
+  enabledFeatures:
+    - 'no-default-env-resolve'
   defaultServices:
     - name: 'lc-test'
       repository: 'vmelikyan/lc-test'

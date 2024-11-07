@@ -2,10 +2,14 @@
 version: '1.0.0'
 
 environment:
+  enabledFeatures:
+    - 'no-default-env-resolve'
   defaultServices:
-    - name: 'lc-test'
-      repository: 'vmelikyan/lc-test'
-      branch: 'all-helm'
     - name: 'lc-test-4'
       repository: 'vmelikyan/lc-test-4'
       branch: 'main'
+  optionalServices:
+    - name: 'lc-test'
+      repository: 'vmelikyan/lc-test'
+      branch: 'all-helm'
+  

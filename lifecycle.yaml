@@ -6,6 +6,6 @@ environment:
     - name: 'lc-test'
       repository: 'vmelikyan/lc-test'
       branch: 'main'
-    - name: 'lc-test-4'
-      repository: 'vmelikyan/lc-test-4'
+    - name: 'lc-test-3'
+      repository: 'vmelikyan/lc-test-3'
       branch: 'main'

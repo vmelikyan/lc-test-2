@@ -1,0 +1,5 @@
+Fresh static-environment selectivity E2E fixture.
+
+This PR resolves two services from separate repositories so the test can verify
+that a tracked upstream push and a selected-service redeploy do not redeploy the
+unrelated service.

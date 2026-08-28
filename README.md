@@ -1,1 +1,1 @@
-# lifecycle-test-app-dockerasdasdasd
+/asfasf# lifecycle-test-app-dockerasdasdasd

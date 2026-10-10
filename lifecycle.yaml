@@ -12,3 +12,5 @@ environment:
     - name: 'lc-test-4'
       repository: 'vmelikyan/lc-test-4'
       branch: 'main'
+
+# config push Z1 (full pass)

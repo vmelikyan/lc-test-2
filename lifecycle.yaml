@@ -14,5 +14,3 @@ environment:
       branch: 'main'
 
 # config push Z1 (full pass)
-
-environment: [broken

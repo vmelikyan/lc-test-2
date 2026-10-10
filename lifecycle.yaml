@@ -12,5 +12,8 @@ environment:
     - name: 'lc-test-4'
       repository: 'vmelikyan/lc-test-4'
       branch: 'main'
+    - name: 'grpc-echo'
+      repository: 'vmelikyan/lc-test'
+      branch: 'main'
 
 # config push Z1 (full pass)

@@ -3,9 +3,12 @@ version: '1.0.0'
 
 environment:
   defaultServices:
-    - name: 'lc-test-helm-local'
+    - name: 'lc-test-gh-type'
       repository: 'vmelikyan/lc-test'
       branch: 'main'
     - name: 'lc-test-3'
       repository: 'vmelikyan/lc-test-3'
+      branch: 'main'
+    - name: 'lc-test-4'
+      repository: 'vmelikyan/lc-test-4'
       branch: 'main'
